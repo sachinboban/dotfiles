@@ -25,6 +25,12 @@ set formatoptions+=r    " comment formatting
 "set t_Co=16
 "let g:solarized_termcolors=16
 
+"********************** Terminal
+set splitbelow          " all splits to happen below
+set termwinsize=5x0
+" open terminal by pressing Ctrl+t
+nnoremap <silent><C-t> :term<CR>
+
 "********************** Searching
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
