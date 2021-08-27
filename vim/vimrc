@@ -43,6 +43,10 @@ let Tlist_Auto_Open = 1
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
 
+" change default arrows
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
 "********************** Custom commands
 " remove all trailing whitespace upon saving(:w) a file
 autocmd BufWritePre * :%s/\s\+$//e

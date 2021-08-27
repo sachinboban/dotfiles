@@ -19,7 +19,7 @@ chmod +x install.sh
 > manage vim plugins.
 
 #### Plugins
-* [NERDTree]][nerdtree-git]
+* [NERDTree][nerdtree-git]
 
 #### Colorschemes
 * [Flattened][flattened-git]
