@@ -1,0 +1,3 @@
+[submodule "vim/vim/pack/foo/opt/flattened"]
+	path = vim/vim/pack/foo/opt/flattened
+	url = git@github.com:romainl/flattened.git

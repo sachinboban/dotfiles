@@ -1,7 +1,7 @@
 "********************** Colors
 syntax enable               " enable syntax processing
-colorscheme solarized       " color scheme ~/.vim/colors/
-set background=dark         " background color (light/dark)
+colorscheme flattened_dark  " color scheme
+"set background=dark        " background color (light/dark)
 
 "********************** Spaces & Tabs
 set tabstop=4           " number of visual spaces per TAB
