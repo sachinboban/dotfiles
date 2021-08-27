@@ -33,12 +33,6 @@ nnoremap <silent><space> :nohlsearch<CR>
 
 "********************** Pluggins Specific
 
-"*********** TagList
-let Tlist_WinWidth = 40
-let Tlist_Show_One_File = 1
-let Tlist_Show_Menu = 1
-let Tlist_Auto_Open = 1
-
 "*********** NERDTree
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
@@ -46,6 +40,9 @@ autocmd VimEnter * NERDTree | wincmd p
 " change default arrows
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+
+"*********** vim-gitgutter
+set updatetime=100      " diff markers should appear faster
 
 "********************** Custom commands
 " remove all trailing whitespace upon saving(:w) a file

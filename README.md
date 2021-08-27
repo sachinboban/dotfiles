@@ -20,6 +20,7 @@ chmod +x install.sh
 
 #### Plugins
 * [NERDTree][nerdtree-git]
+* [vim-gitgutter][gitgutter-git]
 
 #### Colorschemes
 * [Flattened][flattened-git]
@@ -30,4 +31,5 @@ chmod +x install.sh
 
 [vim-pkg]: https://vimhelp.org/repeat.txt.html#packages
 [nerdtree-git]: https://github.com/preservim/nerdtree
+[gitgutter-git]: https://github.com/airblade/vim-gitgutter
 [flattened-git]: https://github.com/romainl/flattened
