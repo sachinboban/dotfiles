@@ -42,3 +42,4 @@ let Tlist_Auto_Open = 1
 "********************** Custom commands
 " remove all trailing whitespace upon saving(:w) a file
 autocmd BufWritePre * :%s/\s\+$//e
+

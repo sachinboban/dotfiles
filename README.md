@@ -2,10 +2,14 @@
 All the required dotfiles
 
 ## What's included
-1. vimrc
+### vim
+> Assumes vim8 as the version. It uses the in-built vim packages to manage
+> vim plugins.
 
 ## How to install
-> _This will move any existing dotfile (mentined in the section above) from the folder dotfiles (if any) to dotfiles_old, you have been warned_
+> _This will move any existing dotfile (mentined in the section above) from the
+> folder dotfiles (if any) to dotfiles_old, you have been warned_
+>
  * Clone this repo
  * change the permission of the install.sh file and run the script
 ```
