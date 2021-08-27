@@ -22,8 +22,8 @@ set ls=2                " show file name
 set ruler               " always show the ruler
 set colorcolumn=80      " insert a colorcolumn (for line limit)
 set formatoptions+=r    " comment formatting
-set t_Co=16
-let g:solarized_termcolors=16
+"set t_Co=16
+"let g:solarized_termcolors=16
 
 "********************** Searching
 set incsearch           " search as characters are entered
@@ -38,6 +38,10 @@ let Tlist_WinWidth = 40
 let Tlist_Show_One_File = 1
 let Tlist_Show_Menu = 1
 let Tlist_Auto_Open = 1
+
+"*********** NERDTree
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
 
 "********************** Custom commands
 " remove all trailing whitespace upon saving(:w) a file

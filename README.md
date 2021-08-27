@@ -18,6 +18,9 @@ chmod +x install.sh
 > Assumes vim8 as the version. It uses the in-built [vim packages][vim-pkg] to
 > manage vim plugins.
 
+#### Plugins
+* [NERDTree]][nerdtree-git]
+
 #### Colorschemes
 * [Flattened][flattened-git]
 
@@ -26,4 +29,5 @@ chmod +x install.sh
  * [vim packages][vim-pkg]
 
 [vim-pkg]: https://vimhelp.org/repeat.txt.html#packages
+[nerdtree-git]: https://github.com/preservim/nerdtree
 [flattened-git]: https://github.com/romainl/flattened
