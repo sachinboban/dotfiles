@@ -41,7 +41,10 @@ nnoremap <silent><space> :nohlsearch<CR>
 
 "*********** NERDTree
 " Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p
+
+" toggle NERDTree by pressing Ctrl+b
+nnoremap <silent><C-b> :NERDTreeToggle<CR>
 
 " change default arrows
 let g:NERDTreeDirArrowExpandable = '▸'
