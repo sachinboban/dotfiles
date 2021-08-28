@@ -28,6 +28,7 @@ chmod +x install.sh
 
 #### Colorschemes
 * [Flattened][flattened-git]
+* [solarized][solarized-git]
 
 ## References
  * [smalleycreative](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/) - Using Git and Github to Manage Your Dotfiles
@@ -38,3 +39,4 @@ chmod +x install.sh
 [gitgutter-git]: https://github.com/airblade/vim-gitgutter
 [tagbar-git]: https://github.com/preservim/tagbar
 [flattened-git]: https://github.com/romainl/flattened
+[solarized-gitsolarized-git]: https://github.com/altercation/vim-colors-solarized

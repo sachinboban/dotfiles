@@ -1,6 +1,6 @@
 "********************** Colors
 syntax enable               " enable syntax processing
-colorscheme flattened_dark  " color scheme
+colorscheme solarized       " color scheme
 set background=dark         " background color (light/dark)
 
 "********************** Spaces & Tabs
@@ -22,8 +22,10 @@ set ls=2                " show file name
 set ruler               " always show the ruler
 set colorcolumn=80      " insert a colorcolumn (for line limit)
 set formatoptions+=r    " comment formatting
-"set t_Co=16
-"let g:solarized_termcolors=16
+
+"********************** Solarized color
+set t_Co=16
+let g:solarized_termcolors=16
 
 "********************** Terminal
 set splitbelow          " all splits to happen below
