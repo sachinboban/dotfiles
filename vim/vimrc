@@ -1,7 +1,7 @@
 "********************** Colors
 syntax enable               " enable syntax processing
 colorscheme flattened_dark  " color scheme
-"set background=dark        " background color (light/dark)
+set background=dark         " background color (light/dark)
 
 "********************** Spaces & Tabs
 set tabstop=4           " number of visual spaces per TAB
@@ -29,7 +29,7 @@ set formatoptions+=r    " comment formatting
 set splitbelow          " all splits to happen below
 set termwinsize=5x0
 " open terminal by pressing Ctrl+t
-nnoremap <silent><C-t> :term<CR>
+nnoremap <silent><C-t> : bo term<CR>
 
 "********************** Searching
 set incsearch           " search as characters are entered
@@ -43,15 +43,19 @@ nnoremap <silent><space> :nohlsearch<CR>
 " Start NERDTree and put the cursor back in the other window.
 " autocmd VimEnter * NERDTree | wincmd p
 
-" toggle NERDTree by pressing Ctrl+b
-nnoremap <silent><C-b> :NERDTreeToggle<CR>
-
 " change default arrows
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
+" toggle NERDTree by pressing Ctrl+e
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
 "*********** vim-gitgutter
 set updatetime=100      " diff markers should appear faster
+
+"*********** tagbar
+" toggle tabgbar by pressing Ctrl+b
+nnoremap <silent><C-b> :TagbarToggle<CR>
 
 "********************** Custom commands
 " remove all trailing whitespace upon saving(:w) a file

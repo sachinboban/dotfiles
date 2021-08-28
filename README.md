@@ -21,6 +21,10 @@ chmod +x install.sh
 #### Plugins
 * [NERDTree][nerdtree-git]
 * [vim-gitgutter][gitgutter-git]
+* [Tagbar][tagbar-git]
+  > Tagbar requires [Exuberant Ctags][ctags] to be availabe to work. For code
+  > browsing to work, open vim from the directory where the ctags file is
+  > generated (usually generated at the root of you repository).
 
 #### Colorschemes
 * [Flattened][flattened-git]
@@ -32,4 +36,5 @@ chmod +x install.sh
 [vim-pkg]: https://vimhelp.org/repeat.txt.html#packages
 [nerdtree-git]: https://github.com/preservim/nerdtree
 [gitgutter-git]: https://github.com/airblade/vim-gitgutter
+[tagbar-git]: https://github.com/preservim/tagbar
 [flattened-git]: https://github.com/romainl/flattened
