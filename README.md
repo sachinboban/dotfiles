@@ -47,6 +47,8 @@ All the required dotfiles
     set background=light
     colorscheme solarized
     ```
+### bash
+> Based on the default bashrc from Ubuntu 20.04
 
 ## References
  * [Using Git and Github to Manage Your Dotfiles][dofile-ref] by smalleycreative
