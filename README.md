@@ -20,9 +20,9 @@ All the required dotfiles
   ```
 
 ## What's included
-### vim
-> Assumes vim8 as the version. It uses the in-built [vim packages][vim-pkg] to
-> manage vim plugins.
+### vim (vim8)
+The current version uses the in-built [vim packages][vim-pkg] to manage vim
+plugins.
 
 #### Plugins
 * [NERDTree][nerdtree-git]
@@ -48,13 +48,14 @@ All the required dotfiles
     colorscheme solarized
     ```
 ### bash
-> Based on the default bashrc from Ubuntu 20.04
+Based on the default bashrc from Ubuntu 20.04.
 * Display git branch when in a git repository
 
 ## References
  * [Using Git and Github to Manage Your Dotfiles][dofile-ref] by smalleycreative
  * [vim packages][vim-pkg]
  * [Git Submodules][git-submodule]
+ * [Bash/Prompt customization][archwiki-bash] on ArchWiki
 
 [dofile-ref]: http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
 [vim-pkg]: https://vimhelp.org/repeat.txt.html#packages
@@ -65,3 +66,4 @@ All the required dotfiles
 [flattened-git]: https://github.com/romainl/flattened
 [solarized-git]: https://github.com/altercation/vim-colors-solarized
 [git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[archwiki-bash]: https://wiki.archlinux.org/title/Bash/Prompt_customization
