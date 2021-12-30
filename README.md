@@ -49,6 +49,7 @@ All the required dotfiles
     ```
 ### bash
 > Based on the default bashrc from Ubuntu 20.04
+* Display git branch when in a git repository
 
 ## References
  * [Using Git and Github to Manage Your Dotfiles][dofile-ref] by smalleycreative
