@@ -51,6 +51,7 @@ plugins.
 Based on the default bashrc from Ubuntu 20.04.
 * Display clock on the right top of the terminal.
 * Display current git branch as part of the clock.
+* Display status (with return code) of the last command.
 
 ## References
  * [Using Git and Github to Manage Your Dotfiles][dofile-ref] by smalleycreative
