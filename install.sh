@@ -4,14 +4,12 @@
 # This script creates symlinks from the home directory to any desired dotfiles
 ############################
 
-########## Variables
-
 DIR=$PWD                    # current dotfiles directory
 BACKUP_DIR=~/dotfiles_old   # old dotfiles backup directory
 
 # List of dotfiles to install
+# any dotfile(s) not listed in this list will not be installed
 DOTFILE_LIST="vim bash"
-##########
 
 # Create dotfiles_old in home directory
 mkdir -p $BACKUP_DIR
