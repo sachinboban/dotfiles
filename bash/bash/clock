@@ -1,0 +1,38 @@
+#!/bin/bash
+# Add clock at the right top of the shell
+
+# colors for prompt
+GREEN='\[\033[1;32m\]'
+BLUE='\[\033[1;34m\]'
+DEFAULT='\[\033[1;00m\]'
+
+# git branch
+function git_branch() {
+  if git status > /dev/null 2>&1; then
+      BRANCH="$(git branch | cut -b 3-)"
+  else
+    BRANCH=""
+  fi
+  echo $BRANCH
+}
+
+GIT_BRANCH=$(git_branch)
+
+let DATE_X=$COLUMNS-17
+let TIME_X=$COLUMNS-8
+let BRANCH_X=$COLUMNS-${#GIT_BRANCH}
+
+function prompt_command {
+    DATE=$(date +%a,\ %b\ %d\ %Y)
+    TIME=$(date +%I:%M%P)
+    GIT_BRANCH=$(git_branch)
+    let DATE_X=$COLUMNS-16
+    let TIME_X=$COLUMNS-7
+    let BRANCH_X=$COLUMNS-${#GIT_BRANCH}
+
+    TITLEBAR="${debian_chroot:+($debian_chroot)}${GREEN}\u@\h${DEFAULT}:${BLUE}\W${DEFAULT}\$ "
+
+    PS1="${TITLEBAR}\[\033[s\033[1;${DATE_X}H\]${BLUE}\${DATE}${GREEN}|\[\033[2;${TIME_X}H\]${BLUE}\${TIME}${GREEN}|\[\033[3;${BRANCH_X}H\]${BLUE}\${GIT_BRANCH}${GREEN}|\[\033[u\]"
+}
+
+PROMPT_COMMAND=prompt_command

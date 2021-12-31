@@ -2,6 +2,9 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# Extensions
+CLOCK_EXT=~/.bash/clock
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -56,28 +59,18 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-# git branch
-function git_branch()
-{
-  if git status > /dev/null 2>&1; then
-      GIT_BRANCH="|$(git branch | cut -b 3-)"
-  else
-    GIT_BRANCH=""
-  fi
-  echo $GIT_BRANCH
-}
-
 # colors for prompt
-
 GREEN='\[\033[1;32m\]'
 BLUE='\[\033[1;34m\]'
 DEFAULT='\[\033[1;00m\]'
 
 if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}${GREEN}\u@\h${DEFAULT}:${BLUE}\W\$(git_branch)${DEFAULT}\$ "
+    source $CLOCK_EXT
+    #PS1="${debian_chroot:+($debian_chroot)}${GREEN}\u@\h${DEFAULT}:${BLUE}\W${DEFAULT}\$ "
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W$(git_branch)\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
 fi
+
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir

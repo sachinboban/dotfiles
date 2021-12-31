@@ -49,7 +49,8 @@ plugins.
     ```
 ### bash
 Based on the default bashrc from Ubuntu 20.04.
-* Display git branch when in a git repository
+* Display clock on the right top of the terminal.
+* Display current git branch as part of the clock.
 
 ## References
  * [Using Git and Github to Manage Your Dotfiles][dofile-ref] by smalleycreative
