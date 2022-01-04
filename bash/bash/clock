@@ -4,10 +4,9 @@
 # command
 
 # colors for prompt
-GREEN='\[\033[1;32m\]'
-BLUE='\[\033[1;34m\]'
-RED='\[\033[1;31m\]'
-DEFAULT='\[\033[1;00m\]'
+GREEN="\[$(tput setaf 2)\]"
+BLUE="\[$(tput setaf 4)\]"
+DEFAULT="\[$(tput sgr0)\]"
 
 # git branch
 function git_branch() {
@@ -19,43 +18,54 @@ function git_branch() {
   echo $BRANCH
 }
 
-GIT_BRANCH=$(git_branch)
-
-let DATE_X=$COLUMNS-16
-let STATUS=0
-
 function prompt_command {
     STATUS=$?
 
     DATE=$(date +%a,\ %b\ %d\ %Y)
     TIME=$(date +%I:%M%P)
     GIT_BRANCH=$(git_branch)
-    STATUS_COLOR=$BLUE
 
-    let DATE_X=$COLUMNS-16
+    let PROMPT_X=$(tput cols)-17
 
     if [ $STATUS -eq 0 ]; then
         STATUS_STR="OK"
-        STATUS_COLOR=$BLUE
+        STATUS_COLOR=4
     else
-        STATUS_STR="ERROR\($STATUS\)"
-        STATUS_COLOR=$RED
+        STATUS_STR="ERROR($STATUS)"
+        STATUS_COLOR=1
     fi
-    let STATUS_X=$COLUMNS-${#STATUS_STR}
 
-    PROMPT="${debian_chroot:+($debian_chroot)}${GREEN}\u@\h${DEFAULT}:${BLUE}\W${DEFAULT}\$ "
-    DATE_LINE="\[\033[1;${DATE_X}H\]${BLUE}\${DATE}${GREEN}|"
-    TIME_LINE="\[\033[2;${DATE_X}H\]${BLUE}\$(printf "%16s" $TIME)${GREEN}|"
-    GITB_LINE="\[\033[3;${DATE_X}H\]${BLUE}\$(printf "%16s" $GIT_BRANCH)${GREEN}|"
-    STAT_LINE="\[\033[4;${DATE_X}H\]${STATUS_COLOR}\$(printf "%16s" ${STATUS_STR})${GREEN}|"
+    # display the date
+    tput sc
+    tput cup 0 ${PROMPT_X}
+    tput setaf 4
+    echo -n $DATE
+    tput setaf 2
+    echo -n "|"
 
-PS1="${PROMPT}\
-\[\033[s\]\
-${DATE_LINE}\
-${TIME_LINE}\
-${GITB_LINE}\
-${STAT_LINE}\
-${DEFAULT}\[\033[u\]"
+    # display the time
+    tput cup 1 ${PROMPT_X}
+    tput setaf 4
+    printf "%16s" $TIME
+    tput setaf 2
+    echo -n "|"
+
+    # display the git branch
+    tput cup 2 ${PROMPT_X}
+    tput setaf 4
+    printf "%16s" $GIT_BRANCH
+    tput setaf 2
+    echo -n "|"
+
+    # display the return status
+    tput cup 3 ${PROMPT_X}
+    tput setaf ${STATUS_COLOR}
+    printf "%16s" $STATUS_STR
+    tput setaf 2
+    echo -n "|"
+    tput rc
+
+    PS1="${debian_chroot:+($debian_chroot)}${GREEN}\u@\h${DEFAULT}:${BLUE}\W${DEFAULT}\$ "
 }
 
 PROMPT_COMMAND=prompt_command
