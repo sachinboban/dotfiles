@@ -125,3 +125,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# path to configurations that are specific to apps or libraries
+CONFIG_PATH=~/.bash/configs
+CONFIGS=""
+
+for CONFIG in $CONFIGS; do
+    if [ -f $CONFIG_PATH/$CONFIG  ];then
+        source $CONFIG_PATH/$CONFIG
+    fi
+done
