@@ -11,12 +11,14 @@ All the required dotfiles
   ```sh
   $ git clone --recurse-submodules git@github.com:sachinboban/dotfiles.git
    ```
-  Only the dotfiles listed in `DOTFILE_LIST` in the `install.sh` file shall be
-  installed while running `install.sh`.
+* The dotfiles that shall be installed are listed in `DOTFILE_LIST` in the
+  `install.sh` script. If only specific dotifle(s) needs to be installed, update
+  `DOTFILE_LIST` accordingly. For e.g., if only `vimrc` needs to be installed,
+  set `DOTFILE_LIST` as:
+  ```sh
+  DOTFILE_LIST="vim"
+  ```
 * Change the permission of the `install.sh` file and run the script
-  > Only the dotfiles listed in `DOTFILE_LIST` in the `install.sh` file will be
-  > installed while running `install.sh`. Edit `DOTFILE_LIST` to install only
-  > those required dotfiles.
   ```sh
   $ cd /path/to/dotfiles/
   $ chmod +x install.sh

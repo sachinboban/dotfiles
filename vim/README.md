@@ -9,6 +9,7 @@ plugins.
   > Tagbar requires [Exuberant Ctags][ctags] to work. For code browsing to work,
   > open vim from the directory where the ctags file is generated (usually
   > generated at the root of your repository).
+* [lightline][lightline-git]
 
 ## Colorschemes
 * [Flattened][flattened-git]
@@ -27,12 +28,12 @@ plugins.
     ```
 ## References
  * [vim packages][vim-pkg]
- * [Git Submodules][git-submodule]
 
 [vim-pkg]: https://vimhelp.org/repeat.txt.html#packages
 [nerdtree-git]: https://github.com/preservim/nerdtree
 [gitgutter-git]: https://github.com/airblade/vim-gitgutter
 [tagbar-git]: https://github.com/preservim/tagbar
+[lightline-git]: https://github.com/itchyny/lightline.vim
 [ctags]: http://ctags.sourceforge.net/
 [flattened-git]: https://github.com/romainl/flattened
 [solarized-git]: https://github.com/altercation/vim-colors-solarized

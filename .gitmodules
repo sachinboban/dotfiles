@@ -13,3 +13,6 @@
 [submodule "vim/vim/pack/foo/opt/solarized"]
 	path = vim/vim/pack/foo/opt/solarized
 	url = git@github.com:altercation/vim-colors-solarized.git
+[submodule "vim/vim/pack/foo/start/lightline"]
+	path = vim/vim/pack/foo/start/lightline
+	url = git@github.com:itchyny/lightline.vim.git
