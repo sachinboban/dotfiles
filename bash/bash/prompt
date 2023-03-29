@@ -26,12 +26,12 @@ function get_git_branch() {
 # is branch dirty
 function is_git_dirty() {
     if [[ `git status --porcelain`  ]]; then
-        DIRTY=$(echo -e '+')
+        DIRTY="*"
     else
         DIRTY=""
     fi
 
-    echo $DIRTY
+    echo "$DIRTY"
 }
 
 function prompt_command {
