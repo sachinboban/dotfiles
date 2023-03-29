@@ -4,6 +4,7 @@
 
 # Extensions
 CLOCK_EXT=~/.bash/clock
+CUSTOM_PROMPT=~/.bash/prompt
 
 # If not running interactively, don't do anything
 case $- in
@@ -65,7 +66,8 @@ BLUE='\[\033[1;34m\]'
 DEFAULT='\[\033[1;00m\]'
 
 if [ "$color_prompt" = yes ]; then
-    source $CLOCK_EXT
+    #source $CLOCK_EXT
+    source $CUSTOM_PROMPT
     #PS1="${debian_chroot:+($debian_chroot)}${GREEN}\u@\h${DEFAULT}:${BLUE}\W${DEFAULT}\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '

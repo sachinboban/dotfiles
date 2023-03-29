@@ -1,0 +1,63 @@
+#!/bin/bash
+# Custom prompt
+# Prompt contains username, hostname, repo root
+
+# Colors
+COLOR_DEFAULT="\[$(tput sgr0)\]"
+COLOR_RED="\[$(tput setaf 1)\]"
+COLOR_GREEN="\[$(tput setaf 2)\]"
+COLOR_PINK="\[$(tput setaf 5)\]"
+COLOR_CYAN="\[$(tput setaf 6)\]"
+
+# Symbols to be used
+BRANCH_SYM=$(echo -e "\uE0A0")
+PROMPT_SYM=$(echo -e "\U2771")
+
+# git branch
+function get_git_branch() {
+  if git status > /dev/null 2>&1; then
+      BRANCH="$(git branch | cut -b 3-)"
+  else
+    BRANCH=""
+  fi
+  echo $BRANCH
+}
+
+# is branch dirty
+function is_git_dirty() {
+    if [[ `git status --porcelain`  ]]; then
+        DIRTY=$(echo -e '+')
+    else
+        DIRTY=""
+    fi
+
+    echo $DIRTY
+}
+
+function prompt_command {
+    STATUS=$?
+    COLOR_STATUS=${PINK}
+    GIT_BRANCH=$(get_git_branch)
+
+    PROMPT_STR="${CYAN}\w "
+
+    # Display branch info if on a git repo
+    if [ "${GIT_BRANCH}" != "" ]; then
+        GIT_DIRTY=$(is_git_dirty)
+        PROMPT_STR+="${GREEN}${BRANCH_SYM} "
+        PROMPT_STR+="${GIT_BRANCH}${COLOR_RED}${GIT_DIRTY}${COLOR_DEFAULT}"
+    fi
+
+    # Set prompt color
+    if [ $STATUS -ne 0  ]; then
+        COLOR_STATUS=${RED}
+    fi
+
+    # Add prompt symbol
+    PROMPT_STR+="${COLOR_STATUS}\n${PROMPT_SYM} ${COLOR_DEFAULT}"
+
+    # Set PS1
+    PS1=$PROMPT_STR
+}
+
+PROMPT_COMMAND=prompt_command
