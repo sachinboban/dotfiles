@@ -36,21 +36,21 @@ function is_git_dirty() {
 
 function prompt_command {
     STATUS=$?
-    COLOR_STATUS=${PINK}
+    COLOR_STATUS=${COLOR_PINK}
     GIT_BRANCH=$(get_git_branch)
 
-    PROMPT_STR="${CYAN}\w "
+    PROMPT_STR="${COLOR_CYAN}\w "
 
     # Display branch info if on a git repo
     if [ "${GIT_BRANCH}" != "" ]; then
         GIT_DIRTY=$(is_git_dirty)
-        PROMPT_STR+="${GREEN}${BRANCH_SYM} "
+        PROMPT_STR+="${COLOR_GREEN}${BRANCH_SYM} "
         PROMPT_STR+="${GIT_BRANCH}${COLOR_RED}${GIT_DIRTY}${COLOR_DEFAULT}"
     fi
 
     # Set prompt color
     if [ $STATUS -ne 0  ]; then
-        COLOR_STATUS=${RED}
+        COLOR_STATUS=${COLOR_RED}
     fi
 
     # Add prompt symbol
