@@ -1,6 +1,6 @@
 "********************** Colors
 syntax enable           " enable syntax processing
-colorscheme solarized   " color scheme
+"colorscheme solarized  " color scheme
 set background=dark     " background color (light/dark)
 
 "********************** Spaces & Tabs
@@ -29,9 +29,9 @@ let g:solarized_termcolors=16
 
 "********************** Terminal
 set splitbelow          " all splits to happen below
-set termwinsize=5x0
-" open terminal by pressing Ctrl+t
-nnoremap <silent><C-t> : bo term<CR>
+set termwinsize=20x0
+" open terminal by pressing Ctrl+m
+nnoremap <silent><C-m> : bo term<CR>
 
 "********************** Searching
 set incsearch           " search as characters are entered
