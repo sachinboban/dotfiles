@@ -8,11 +8,14 @@ set tabstop=4           " number of visual spaces per TAB
 set softtabstop=4       " number of spaces in tab when editing
 set shiftwidth=4        " when indenting with '>', use 4 spaces width
 set expandtab           " tabs are spaces
+" do not expand tab for make files
+autocmd FileType make set noexpandtab
 
 "********************** UI Config
 set number              " show line numbers
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
+filetype on
 filetype indent on      " load filetype-specific indent files
 set wildmenu            " visual autocomplete for command menu
 set lazyredraw          " redraw only when we need to.
@@ -62,4 +65,3 @@ nnoremap <silent><C-b> :TagbarToggle<CR>
 "********************** Custom commands
 " remove all trailing whitespace upon saving(:w) a file
 autocmd BufWritePre * :%s/\s\+$//e
-
