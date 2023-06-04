@@ -26,6 +26,19 @@ plugins.
     set background=light
     colorscheme solarized
     ```
+* [gruvbox][gruvbox-git]
+  ```
+  autocmd vimenter * ++nested colorscheme gruvbox
+  ```
+  + To choose dark/light backgroound:
+    ```
+    set background=dark
+    set background=light
+    ```
+  + [Terminal specific][gruvbox-term-specific]
+
+
+
 ## References
  * [vim packages][vim-pkg]
 
@@ -37,3 +50,5 @@ plugins.
 [ctags]: http://ctags.sourceforge.net/
 [flattened-git]: https://github.com/romainl/flattened
 [solarized-git]: https://github.com/altercation/vim-colors-solarized
+[gruvbox-git]: https://github.com/morhetz/gruvbox
+[gruvbox-term-specific]: https://github.com/morhetz/gruvbox/wiki/Terminal-specific

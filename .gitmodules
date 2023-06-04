@@ -16,3 +16,6 @@
 [submodule "vim/vim/pack/foo/start/lightline"]
 	path = vim/vim/pack/foo/start/lightline
 	url = git@github.com:itchyny/lightline.vim.git
+[submodule "vim/vim/pack/foo/opt/gruvbox"]
+	path = vim/vim/pack/foo/opt/gruvbox
+	url = https://github.com/morhetz/gruvbox
