@@ -2,7 +2,7 @@
 syntax enable           " enable syntax processing
 set background=dark     " background color (light/dark)
 "colorscheme solarized  " color scheme
-autocmd vimenter * ++nested colorscheme gruvbox
+"autocmd vimenter * ++nested colorscheme gruvbox
 
 "********************** Spaces & Tabs
 set tabstop=4           " number of visual spaces per TAB

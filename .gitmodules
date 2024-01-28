@@ -19,3 +19,6 @@
 [submodule "vim/vim/pack/foo/opt/gruvbox"]
 	path = vim/vim/pack/foo/opt/gruvbox
 	url = https://github.com/morhetz/gruvbox
+[submodule "vim/vim/pack/foo/opt/dracula"]
+	path = vim/vim/pack/foo/opt/dracula
+	url = https://github.com/dracula/vim.git

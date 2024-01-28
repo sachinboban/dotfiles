@@ -130,7 +130,7 @@ fi
 
 # path to configurations that are specific to apps or libraries
 CONFIG_PATH=~/.bash/configs
-CONFIGS=""
+CONFIGS="flutter"
 
 for CONFIG in $CONFIGS; do
     if [ -f $CONFIG_PATH/$CONFIG  ];then

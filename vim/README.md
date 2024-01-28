@@ -36,7 +36,7 @@ plugins.
     set background=light
     ```
   + [Terminal specific][gruvbox-term-specific]
-
+* [dracula[dracula-git]
 
 
 ## References
@@ -52,3 +52,4 @@ plugins.
 [solarized-git]: https://github.com/altercation/vim-colors-solarized
 [gruvbox-git]: https://github.com/morhetz/gruvbox
 [gruvbox-term-specific]: https://github.com/morhetz/gruvbox/wiki/Terminal-specific
+[dracula-git]: https://github.com/dracula/vim
