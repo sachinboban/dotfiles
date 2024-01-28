@@ -3,6 +3,7 @@ syntax enable           " enable syntax processing
 set background=dark     " background color (light/dark)
 "colorscheme solarized  " color scheme
 "autocmd vimenter * ++nested colorscheme gruvbox
+au VimEnter * colorscheme dracula
 
 "********************** Spaces & Tabs
 set tabstop=4           " number of visual spaces per TAB
@@ -28,8 +29,8 @@ set colorcolumn=80      " insert a colorcolumn (for line limit)
 set formatoptions+=r    " comment formatting
 
 "********************** Solarized color
-set t_Co=16
-let g:solarized_termcolors=16
+"set t_Co=16
+"let g:solarized_termcolors=16
 
 "********************** Terminal
 set splitbelow          " all splits to happen below

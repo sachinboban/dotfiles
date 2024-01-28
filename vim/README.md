@@ -36,7 +36,11 @@ plugins.
     set background=light
     ```
   + [Terminal specific][gruvbox-term-specific]
-* [dracula[dracula-git]
+* [dracula][dracula-git]
+  To enable, add the following to `vimrc`:
+  ```
+  au VimEnter * colorscheme dracula
+  ```
 
 
 ## References
